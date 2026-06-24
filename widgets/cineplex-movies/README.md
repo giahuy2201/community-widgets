@@ -1,5 +1,5 @@
 # Description
-This widget fetch movies that are currently playing in your Cineplex cinemas using their site API
+This widget fetches movies that are currently playing in your Cineplex cinemas using their site API
 
 ![No filter](./filter-none.png)
 
@@ -30,7 +30,7 @@ This widget fetch movies that are currently playing in your Cineplex cinemas usi
     {{ $numberOfItems := .Options.IntOr "items" 10 }}
     
     {{ if eq $subscriptionKey ""}}
-        <div class="widget-content-frame" style="flex=0 0 25vh; display:flex">
+        <div class="widget-content-frame" style="flex=0 0 auto; display:flex">
             <div class="grow padding-inline-widget margin-top-10 margin-bottom-10 color-negative">
                 ocp-apim-subscription-key not set.
             </div>
@@ -105,14 +105,14 @@ This widget fetch movies that are currently playing in your Cineplex cinemas usi
               {{ end }}
             </div>
         {{ else }}
-            <div class="widget-content-frame" style="flex=0 0 25vh; display:flex">
+            <div class="widget-content-frame" style="flex=0 0 auto; display:flex">
               <div class="grow padding-inline-widget margin-top-10 margin-bottom-10">
                 No upcoming entries on the watchlist.
               </div>
             </div>
         {{ end }}
       {{ else }}
-         <div class="widget-content-frame" style="flex=0 0 25vh; display:flex">
+         <div class="widget-content-frame" style="flex=0 0 auto; display:flex">
               <div class="grow padding-inline-widget margin-top-10 margin-bottom-10">
                 Failed to fetch items (status {{ $items.Response.StatusCode }})
               </div>
